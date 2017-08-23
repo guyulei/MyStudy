@@ -9,12 +9,15 @@ import android.widget.Button;
 import android.widget.SeekBar;
 
 import com.guyulei.mystudy.view.SaleProgressView;
+import com.jaredrummler.android.widget.AnimatedSvgView;
 import com.lljjcoder.city_20170724.CityPickerView;
 import com.lljjcoder.city_20170724.bean.CityBean;
 import com.lljjcoder.city_20170724.bean.DistrictBean;
 import com.lljjcoder.city_20170724.bean.ProvinceBean;
 import com.lljjcoder.citylist.CityListSelectActivity;
 import com.lljjcoder.citylist.bean.CityInfoBean;
+
+import butterknife.ButterKnife;
 
 import static com.guyulei.mystudy.R.id.choose_city_ios;
 
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         initview();
 
     }
@@ -55,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
+
+        AnimatedSvgView animatedsvgview = (AnimatedSvgView) findViewById(R.id.animated_svg_view);
+        animatedsvgview.start();
     }
 
     @Override
