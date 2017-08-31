@@ -6,6 +6,11 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
+        <!--启动短暂白屏改为透明的-->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
 </resources>
